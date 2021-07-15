@@ -1,0 +1,11 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.texto {
+    width: 86%;
+    max-width: 600px;
+    border: 1px solid ;
+
+}

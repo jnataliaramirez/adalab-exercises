@@ -1,0 +1,25 @@
+.div {
+    width: 300px;
+    height: 300px;
+    margin: 40px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.div1 {
+    background-color: aqua;
+    position: relative;
+    left: 100px;
+    top: 50px;
+}
+.div2 {
+    background-color: salmon;
+    position: relative;
+    right: 50px;
+    bottom: 320px;
+}
+.div3 {
+    background-color: hotpink;
+    position: relative;
+    left: 180px;
+    bottom: 240px;
+}

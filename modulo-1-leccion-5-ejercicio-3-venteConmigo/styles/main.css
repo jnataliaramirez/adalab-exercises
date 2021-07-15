@@ -1,0 +1,17 @@
+body {
+    position: relative;
+    
+}
+header {
+    background-color: black;
+    color: aliceblue;
+    position: fixed;
+    width: 100vh;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+}
+main {
+    position: absolute;
+    top: 35px;
+}

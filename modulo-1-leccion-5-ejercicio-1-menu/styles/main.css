@@ -1,0 +1,10 @@
+.menu {
+    list-style: none;
+    border: 3px solid palegreen ;
+    display: flex;
+    justify-content: center;
+}
+
+.items {
+    padding-left: 12px;
+}

@@ -1,0 +1,23 @@
+.div {
+    width : 100px;
+    height: 100px;
+}
+
+.block {
+    display         : block;
+    background-color: aqua;
+}
+
+.inline {
+    display         : inline;
+    background-color: darkmagenta;
+}
+
+.inline-block {
+    display         : inline-block;
+    background-color: wheat;
+}
+
+.none {
+    display: none;
+}
