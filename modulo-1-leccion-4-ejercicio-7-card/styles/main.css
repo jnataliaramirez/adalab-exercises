@@ -1,0 +1,103 @@
+* {
+    /* box-sizing: border-box; */
+}
+.body {
+    margin: 25px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 650px;
+    /* max-width: 840px; */
+    border: 2px solid gray;
+    padding: 5px;
+}
+.general {
+    display: flex;
+
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    min-width: 300px;
+
+}
+.image {
+    border: 3px solid black;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+h1 {
+    font-weight: 600;
+    padding: 3px;
+    min-width: 5px;
+}
+.especialidad {
+    color: silver;
+    padding: 3px;
+}
+.botones {
+    padding: 7px 0;
+    display: inline-block;
+    /* display: flex; */
+}
+button {
+    border: none;
+    height:25px;
+    border-radius: 5px;
+    font-size: small;
+}
+.container-puntuacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.val-com-pu {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+}
+.val-com {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.reservar {
+    color: aliceblue;
+    background-color: silver;
+}
+.presupuesto {
+    background-color: white;
+    color: silver;
+    border: 2px solid;
+}
+.valoraciones {
+    font-size: 1px;
+    font-weight: 500;
+}
+.comentarios {
+    font-size: 1px;
+    font-weight: 500;
+    color: silver;
+}
+.puntuacion {
+    font-size: 1px;
+    font-weight: 500;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: silver;
+    border-radius: 5px;
+}
+.estrella {
+    font-size: 15px;
+    color: silver;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
