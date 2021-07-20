@@ -1,0 +1,11 @@
+main {
+    border: 5px solid pink ;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+img {
+    border: 2px solid navy ;
+    width: 200px;
+    height: 100px;
+}

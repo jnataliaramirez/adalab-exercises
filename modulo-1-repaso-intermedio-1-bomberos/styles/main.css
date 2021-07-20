@@ -57,7 +57,8 @@
     font-size: 20px;
     font-weight: 600;
     position: absolute;
-    top: 8px;
+    top: 11px;
+    right: 18px;
 }
 .footer {
     height: 10vh;
