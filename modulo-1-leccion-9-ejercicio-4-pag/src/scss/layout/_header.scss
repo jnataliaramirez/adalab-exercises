@@ -1,0 +1,10 @@
+header {
+  height: 75px;
+  @media all and (min-width: 768px) {
+    height: 100px;
+  }
+  @media all and (min-width: 1280) {
+    height: 110px;
+  }
+  background-color: aqua;
+}
