@@ -1,0 +1,12 @@
+.row {
+  display: grid;
+  /* gap: 1  grid-template-areas: "header footer" "main aside" "footer  ";
+px; */
+  justify-content: flex-start;
+}
+.box {
+  /* width: 50px; */
+  height: 90px;
+  background-color: #14d9c4;
+  margin-bottom:12px ;
+}
