@@ -1,0 +1,13 @@
+.red {
+    background-color: red;
+}
+.purple {
+    background-color: purple;
+}
+.green {
+    background-color: lightgreen;
+}
+.body {
+    height: 100vh;
+    width: 100vw;
+}
