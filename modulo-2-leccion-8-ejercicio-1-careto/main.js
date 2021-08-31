@@ -8,7 +8,7 @@ function faceWink() {
 }
 
 function faceSmile() {
-    faceState.innerHTML = ':)'
+    faceState.innerHTML = ':)'; 
 }
 
 pageHtml.addEventListener('click', faceWink);
