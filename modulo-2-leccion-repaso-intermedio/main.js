@@ -1,6 +1,6 @@
 'use strict';
 
-const mainContent = document.querySelector('.main')
+const mainContent = document.querySelector('.main');
 const faceState = document.querySelector('.face');
 const selectState = document.querySelector('#state');
 const updateState = document.querySelector('.update');
@@ -12,6 +12,12 @@ function changeFace() {
     let text = selectState.options[selectState.selectedIndex].text;
     // TODO Cambiar en el html la cara: estado (face)
     faceState.innerHTML = text; 
+    
+    // ? Solución en clase 
+    // TODO Devuelve la opcion seleccionada
+    // let selectValue = selectState.value
+    // TODO Cambiar en el html la cara: estado (face)
+    // faceState.innerHTML = selectValue
 }
 
 // * Función para generar un numero random 
