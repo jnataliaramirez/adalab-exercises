@@ -1,11 +1,16 @@
 'use strict';
 
 const faceState = document.querySelector('.face');
-
-function face() {
+const pageHtml = document.querySelector('.page')
+debugger
+function faceWink() {
+    faceState.innerHTML = ';)'; 
 }
 
-faceState.innerHTML = ';)'
+function faceSmile() {
+    faceState.innerHTML = ':)'
+}
 
+pageHtml.addEventListener('click', faceWink);
 
-pageHtml.addEventListener('click', face);
+pageHtml.addEventListener('mouseout', faceSmile);
