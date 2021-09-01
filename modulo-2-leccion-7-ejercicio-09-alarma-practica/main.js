@@ -7,7 +7,7 @@ function selectBtn() {
   screen.classList.toggle('red')
 }
 
-//forEach permite recorrer los elementos del array sin necesidad de usar for 
+//forEach permite recorrer los elementos del array sin necesidad de usar for y ejecuta la funcion que hay dentro de si para cada elemento del array
 //Se crea una función que recorra cada elemento y escuche cuando se da click sobre este 
 btns.forEach(btn => btn.addEventListener('click', selectBtn));
 
