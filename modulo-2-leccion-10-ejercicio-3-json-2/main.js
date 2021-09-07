@@ -11,7 +11,8 @@ function getInfoGit() {
   console.log(username)
   
   fetch(`https://api.github.com/users/${username}`)
-    .then(response => response.json())
+    .then(response => { console.log(response) 
+      return response.json()})
     .then(data => {
         nameUser.innerHTML = data.name;
         repos.innerHTML = data.public_repos;
