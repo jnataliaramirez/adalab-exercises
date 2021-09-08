@@ -10,12 +10,7 @@ const users = [
 
 
 const sayHi = users.filter(
-    users => {
-    if (users.isPremium === true) {
-        console.log(`Bienvenida ${users.name}. Gracias por confiar en nosotros`);
-    } 
-    }
-);
+    users => users.isPremium === true);
 
-
+console.log(sayHi)
 

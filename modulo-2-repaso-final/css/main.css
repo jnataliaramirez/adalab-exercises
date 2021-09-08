@@ -1,0 +1,10 @@
+.list-palette {
+    list-style: none;
+}
+.wrap-palette {
+    display: flex;
+}
+.color__item {
+    height: 50px;
+    width: 50px;
+}
