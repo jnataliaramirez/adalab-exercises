@@ -15,7 +15,7 @@ fetch("http://beta.adalab.es/ejercicios-extra/js-ejercicio-de-paletas/data/palet
     .then(response => response.json())
     .then(data => {
         dataPalettes = data.palettes; 
-
+        console.log(data);
     render();
 })
 
@@ -24,7 +24,6 @@ function render() {
 
     // * Un for para cojer cada uno de los elementos del array como uno solo
     for (const palette of dataPalettes) {
-
         // * Crear elementos html
         const newListItemEl = document.createElement('li');
         const newTitleItemEl = document.createElement('h2');
