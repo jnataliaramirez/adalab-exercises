@@ -5,12 +5,9 @@ import { useState } from 'react';
 // Fichero src/components/App.js
 import '../styles/App.scss';
 
-// Se inicializa la variable en 0
-// para que sea sumada en el handler
-let countClick = parseInt(0); 
-
 function App() {
   const [contador, setContador] = useState(0);
+  let countClick = parseInt(0); 
 
   // Funciones manejadoras
   const handleContador = () => {
