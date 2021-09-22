@@ -2,39 +2,31 @@
 import '../styles/App.scss';
 import { useEffect, useState } from 'react'
 import ls from '../services/localStorage';
-
+// import data from './data.js'
 
 function App() {
   
   const [tasks, setTasks] = useState([
-  { task: "Comprar harina, jamón y pan rallado", completed: true, id: "235" },
-  { task: "Hacer croquetas ricas", completed: true, id: "355" },
-  { task: "Ir a la puerta de un gimnasio", completed: false, id: "223" },
-  {
-    task: "Comerme las croquetas mirando a la gente que entra en el gimnasio",
-    completed: false,
-    id: "674",
-  },
-  ])
+    { task: "Comprar harina, jamón y pan rallado", completed: true, id: "235" },
+    { task: "Hacer croquetas ricas", completed: true, id: "355" },
+    { task: "Ir a la puerta de un gimnasio", completed: false, id: "223" },
+    {
+        task: "Comerme las croquetas mirando a la gente que entra en el gimnasio",
+        completed: false,
+        id: "674",
+    },
+  ]);
 
-  // Estados
-  // Explicación Miguel :)
-  // En vez de leer la propiedad name leemos la propiedad data y su valor por defecto es un objeto vacío: ls.get('data', {})
-  // Del objeto (vacío o relleno que nos devuelve ls.get) obtenemos la propiedad name: ls.get('data', {}).name
-  // Si la propiedad name existe la usamos, si no, usamos un string vacío: ls.get('data', {}).name || ''
+  // Se crea un clon de tasks, ya que los datos son guardados y 
+  // manipulados para despues poder tomarlos del localStorage
+  const [cloneTasks, setCloneTasks] = useState(ls.get('tasks', ''))
 
-  const [lsTasks, setLsTasks] = useState(ls.get('tasks', '')
-
-  // useEffect
-
-  // Usamos useEffect para guardar los datos en el local storage
+  // Permite añadir info a localStorage, 
+  // se crea un clon de tasks que se puede guardar con useState en lS, 
+  // ya que el original no se puede modificar porque esta fijo
   useEffect(() => {
-    // En vez de guardar el nombre por un lado y el email por otro
-    // Guardamos en el local storage un objeto data con las propiedad name y email: { name: 'loquesea', email: 'loquefuere' }
-    ls.set('tasks', {
-      task: lsTasks, 
-    });
-  }, [lsTasks]);
+    ls.set('tasks', cloneTasks)
+  }, [cloneTasks]);
 
   // Funciones manejadoras :P 
   function handleFav(ev) {
@@ -42,28 +34,30 @@ function App() {
     const findTask = tasks.find(task => ev.currentTarget.id == task.id) 
     // Cambiar el estado de true a false y viceversa
     findTask.completed = !findTask.completed;
-    // Guardar la serie en el estado
+    // Guardar la serie en el estado (temporal/Mientras la sesión)
     setTasks([...tasks])
-    // Añadir a localStorage
-    setLsTasks({...findTask})
+    // Añadir a variable usestate para localStorage
+    setCloneTasks([...tasks])
   }
 
 
   const renderTasks = () => {
-    return tasks.map((task) => {
-      if (task.completed) {
+    // Se renderiza con cloneTasks, ya que es la que esta guardando la info en lS, 
+    // recuerda: que en este ejercicio tasks solo se esta guardando de manera temporal. 
+    return cloneTasks.map((cloneTask) => {
+      if (cloneTask.completed) {
         return ( 
         <li 
-        key={task.id} 
-        className="li_done"id={task.id} 
+        key={cloneTask.id} 
+        className="li_done"id={cloneTask.id} 
         onClick={handleFav} 
-        >{task.task}</li> );
+        >{cloneTask.task}</li> );
       } else {
         return <li 
-        key={task.id} 
-        id={task.id} 
+        key={cloneTask.id} 
+        id={cloneTask.id} 
         onClick={handleFav} 
-        >{task.task}</li> 
+        >{cloneTask.task}</li> 
       }
     })
   }
