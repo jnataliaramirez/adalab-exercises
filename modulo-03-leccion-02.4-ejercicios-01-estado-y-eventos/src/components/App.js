@@ -7,6 +7,7 @@ import '../styles/App.scss';
 
 function App() {
   const [contador, setContador] = useState(0);
+  
   let countClick = parseInt(0); 
 
   // Funciones manejadoras
