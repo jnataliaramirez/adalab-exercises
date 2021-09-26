@@ -1,0 +1,17 @@
+:root {
+    --color-menu: #4a4a4a;
+    --color-background: #3CDBC0;
+    --color-white: #FFFFFF; 
+    --body-font: 'Rubik', sans-serif;
+    --font-size-body: 16px; 
+    --font-size-title: 30px; 
+}
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--body-font);
+    height: 100vh;
+}
+
+
+

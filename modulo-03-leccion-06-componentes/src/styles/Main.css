@@ -1,0 +1,26 @@
+/* main */
+.main {
+  width: 100vw;
+  height: 100vh;
+  margin-top: 110px;
+  background-color: var(--color-background);
+}
+.main__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.main__title-p {
+  text-align: center;
+  font-weight: 700;
+  color: var(--color-white);
+  font-size: var(--font-size-title);
+  padding: 4px;
+}
+@media all and (min-width:768px) {
+  .main__title-p {
+      font-size: 40px;
+  }
+}

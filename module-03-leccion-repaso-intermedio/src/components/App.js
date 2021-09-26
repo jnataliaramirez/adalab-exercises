@@ -26,9 +26,11 @@ function App() {
   // Funcion para añadir nuevo contacto
   const handleSubmitContact = (ev) => {
     ev.preventDefault();
+
     // Sirve para añadir nueva información al array original
     setPeople([...people, newPeople]);
 
+    // Limpia los inputs despues de enviar la información
     setNewPeople({
       name: "",
       lastname: "",
