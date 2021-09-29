@@ -1,8 +1,7 @@
-import Logo from './Logo'
-import Nav from './Nav'
+import Logo from "./Logo";
+import Nav from "./Nav";
 
-import '../styles/Header.css';
-
+import "../styles/Header.css";
 
 const Header = () => {
   return (
