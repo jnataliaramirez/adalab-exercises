@@ -13,7 +13,7 @@ function InputGroupText(props) {
     </label>
     <input
       className="input-text"
-      type="text"
+      type={props.inputType}
       name={props.inputName}
       id={props.inputId}
       placeholder={props.inputPlaceholder}

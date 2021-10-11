@@ -23,12 +23,12 @@ const App = () => {
     setEmail(value);
   };
 
-  const handleRegion = ev => {
-    setRegion(ev.target.value);
+  const handleRegion = value => {
+    setRegion(value);
   };
 
-  const handlePaymentType = ev => {
-    setPaymentType(ev.target.value);
+  const handlePaymentType = value => {
+    setPaymentType(value);
   };
 
   const handleLegalTerms = ev => {
@@ -74,8 +74,15 @@ const App = () => {
   return (
     <div>
       < Form
-        inputValue={name}
-        handleChange={handleName}
+        // InputGroupText
+        inputValueName={name}
+        handleChangeName={handleName}
+        inputValueEmail={email}
+        handleChangeEmail={handleEmail}
+        // Region
+        valueRegion={region}
+        handleRegion={handleRegion}
+        
 
       />
 

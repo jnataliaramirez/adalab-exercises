@@ -10,6 +10,10 @@ const Form = (props) => {
     console.log("Enviando datos al servidor...");
   };
 
+  const handleRegion = (ev) => {
+    props.handleRegion(ev.target.value);
+  };
+
   const handleResetButton = () => {
     // Ponemos los mismo valores que hemos usado arriba en los useState
     props.resetName=("")
@@ -29,30 +33,28 @@ const Form = (props) => {
           < InputGroupText
             htmlFor={"name"}
             labelInput={"nombre"}
+            inputType={'text'}
             inputName={"name"}
             inputId={"name"}
             inputPlaceholder={"María Garcia"}
-            inputValue={props.inputValue}
-            handleChange={props.handleChange}
+            inputValue={props.inputValueName}
+            handleChange={props.handleChangeName}
           />
 
           {/* email */}
-          {/* <div className="input-group-text">
-            <label className="label-text" htmlFor="email">
-              Escribe un email:
-            <input
-              className="input-text"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="mariagarcia@gmail.com"
-              value={email}
-              onChange={handleEmail}
-            />
-          </div> */}
+          < InputGroupText
+            htmlFor={"email"}
+            labelInput={"email"}
+            inputType={'email'}
+            inputName={"email"}
+            inputId={"email"}
+            inputPlaceholder={"mariagarcia@gmail.com"}
+            inputValue={props.inputValueEmail}
+            handleChange={props.handleChangeEmail}
+          />
 
           {/* region */}
-          {/* <div className="input-group-select">
+          <div className="input-group-select">
             <label className="label-text" htmlFor="region">
               Indica tu región:
             </label>
@@ -60,7 +62,7 @@ const Form = (props) => {
               className="input-select"
               name="region"
               id="region"
-              value={region}
+              value={props.valueRegion}
               onChange={handleRegion}
             >
               <option>España peninsular</option>
@@ -69,7 +71,7 @@ const Form = (props) => {
               <option>Ceuta</option>
               <option>Melilla</option>
             </select>
-          </div> */}
+          </div>
 
           {/* payment type */}
           {/* <label className="label-text">Indica tu método de pago:</label>
@@ -137,7 +139,7 @@ const Form = (props) => {
 
         {/* reset */}
         {/* Este botón debe estar inhabilitado mientras el formulario no sea válido */}
-        {/* <input className="button" type="submit" value="Enviar" disabled={isValidForm() === false} /> */}
+        <input className="button" type="submit" value="Enviar" disabled={isValidForm() === false} />
 
         {/* send */}
         {/* <button className="button reset" onClick={handleResetButton}>

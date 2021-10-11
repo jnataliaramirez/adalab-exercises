@@ -9,7 +9,7 @@ function InputGroupRadio(props) {
       <label className="label-radio" htmlFor={props.value}>
         {props.labelText}
       </label>
-      {/* Este radio solo debe aparecer activo cuando paymentType sea creditCard */}
+
       <input
         type="radio"
         name="paymentType"
