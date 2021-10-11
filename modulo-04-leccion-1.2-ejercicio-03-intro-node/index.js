@@ -1,19 +1,40 @@
-// ! Escribir ficheros 
+// ! Leer y escribir archivos
 
-// * importar modulo para manipular ficheros
-// paso 0.
+// * importar libreria interna de node para manipular ficheros
 const fs = require('fs');
 
-// * Funcion manejadora
-// paso 2. 
-const handleRead = (err, fileContents) => {
-  if (err !== null) {
-    console.log(err);
-  } else {
-    console.log(fileContents);
-  }
-}
+// * funcion de lectura de fichero
+const readFile = (fileName, callback) => {
+  // * lectura de archivo
+  // la funcion manejadora es = (err, data) ...
+  fs.readFile(fileName, 'utf8', (err, data) => {
+    if (err) {
+      console.log('Error:', err);
+    } else {
+      callback(data);
+    }
+  });
+};
 
-// * parametros para utilizar ficheros
-// paso 1. leer nuevos ficheros
-fs.readFile('./input-file.json', 'utf-8', handleRead)
+// * funcion de escritura de archivo
+const writeFile = (fileName, fileContent, callback) => {
+  // * escritura de archivo
+  // la funcion manejadora es = err ...
+  fs.writeFile(fileName, fileContent, err => {
+    if (err) {
+      console.log('Error:', err);
+    } else {
+      callback();
+    }
+  });
+};
+
+// * ejecucion de las funciones, 1. se ejecuta readFile y dentro de ella con el callback se ejecuta 2. writeFile
+// el callback sera la funcion anonima fileContent 
+readFile('./input-file.json', fileContent => {
+  const newFileContent = fileContent;
+
+  writeFile('./input-file.json', newFileContent, () => {
+    console.log('The file has been copied!');
+  });
+});

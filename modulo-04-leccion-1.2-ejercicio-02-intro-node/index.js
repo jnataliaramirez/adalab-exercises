@@ -1,6 +1,6 @@
 // ! Escribir ficheros 
 
-// * importar modulo para manipular ficheros
+// * importar libreria interna de node para manipular ficheros
 // paso 0.
 const fs = require('fs');
 
