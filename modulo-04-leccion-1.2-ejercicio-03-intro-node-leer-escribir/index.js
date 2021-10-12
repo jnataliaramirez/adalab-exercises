@@ -30,11 +30,22 @@ const writeFile = (fileName, fileContent, callback) => {
 };
 
 // * ejecucion de las funciones, 1. se ejecuta readFile y dentro de ella con el callback se ejecuta 2. writeFile
-// el callback sera la funcion anonima fileContent 
+// el callback sera la funcion anonima fileContent ...
 readFile('./input-file.json', fileContent => {
+  // este es un archivo tipo string (JSON)
   const newFileContent = fileContent;
 
-  writeFile('./input-file.json', newFileContent, () => {
+  // para manipularlo toca convertirlo a objeto
+  const fileObject = JSON.parse(newFileContent)
+  // se cambia los datos de la usuaria
+  fileObject.user = 'Natalia';
+  fileObject.email = 'jnatalia@gmail.com';
+  fileObject.age = 32;
+  // se debe convertir de nuevo a texto para pasarlo a un nuevo archivo
+  const fileString = JSON.stringify(fileObject) 
+  
+  // se ejecuta la funcion de escribir en el archivo
+  writeFile('./output-file.json', fileString, () => {
     console.log('The file has been copied!');
   });
 });
