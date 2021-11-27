@@ -12,16 +12,16 @@ function App() {
 
   // Funciones manejadoras
   const handleContador = () => {
-    countClick += 1;
-    console.log(countClick);
+    countClick = contador + 1;
+    setContador(countClick)
   }
   const handleDecrementar = () => {
-    countClick -= 1; 
-    console.log(countClick);
+    countClick = contador - 1;
+    setContador(countClick)
   }
   const handleReset = () => {
-    countClick = 0;
-    console.log(countClick);
+    countClick = parseInt(0);
+    setContador(countClick)
   }
 
   // HTML
